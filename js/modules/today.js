@@ -17,16 +17,19 @@
 
     let html = "";
 
-    // hero
+    // hero — illustrated banner + gradient body
     html += '<div class="hero">' +
-      '<h1>' + greeting() + ' 👋</h1>' +
-      '<p>' + (todayCount >= goal
-        ? "Daily goal complete. Your streak is safe! 🎉"
-        : "Finish " + (goal - todayCount) + " more lesson" + (goal - todayCount > 1 ? "s" : "") + " today to keep your streak.") + '</p>' +
-      '<div class="hero-stats">' +
-        '<div class="hstat"><div class="n">🔥 ' + Store.Streak.get() + '</div><div class="l">Day streak</div></div>' +
-        '<div class="hstat"><div class="n">' + ov.done + '</div><div class="l">Lessons done</div></div>' +
-        '<div class="hstat"><div class="n">' + ov.pct + '%</div><div class="l">Overall</div></div>' +
+      '<div class="hero-illus"><img src="assets/hero_today.jpg" alt="" loading="eager" /></div>' +
+      '<div class="hero-body">' +
+        '<h1>' + greeting() + ' 👋</h1>' +
+        '<p>' + (todayCount >= goal
+          ? "Daily goal complete. Your streak is safe! 🎉"
+          : "Finish " + (goal - todayCount) + " more lesson" + (goal - todayCount > 1 ? "s" : "") + " today to keep your streak.") + '</p>' +
+        '<div class="hero-stats">' +
+          '<div class="hstat"><div class="n">🔥 ' + Store.Streak.get() + '</div><div class="l">Day streak</div></div>' +
+          '<div class="hstat"><div class="n">' + ov.done + '</div><div class="l">Lessons done</div></div>' +
+          '<div class="hstat"><div class="n">' + ov.pct + '%</div><div class="l">Overall</div></div>' +
+        '</div>' +
       '</div>' +
     '</div>';
 

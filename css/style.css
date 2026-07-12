@@ -115,10 +115,17 @@ body.subview .tb-back { display: block; }
 
 /* hero */
 .hero {
-  background: var(--hero-grad); color: #fff; border: none;
-  border-radius: 22px; padding: 22px; margin-bottom: 16px; box-shadow: var(--shadow-glow);
+  color: #fff; border: none;
+  border-radius: 22px; margin-bottom: 16px; box-shadow: var(--shadow-glow);
   position: relative; overflow: hidden;
 }
+.hero-illus { position: relative; height: clamp(128px, 30vw, 210px); background: #eef2ff; }
+.hero-illus img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; }
+.hero-illus::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 34px;
+  background: linear-gradient(to bottom, transparent, #4338ca); opacity: .9;
+}
+.hero-body { background: var(--hero-grad); padding: 18px 22px 22px; position: relative; }
 .hero h1 { margin: 0 0 4px; font-size: 22px; font-weight: 800; letter-spacing: .01em; }
 .hero p { margin: 0; opacity: .92; font-size: 14px; }
 .hero .hero-stats { display: flex; gap: 18px; margin-top: 16px; }
