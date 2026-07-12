@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="description" content="Homeroom — learn what every American student learns, from kindergarten to 12th grade. Daily lessons, quizzes, and spaced-repetition review, all in English." />
+  <title>Homeroom · Learn American K–12</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234f46e5'/%3E%3Cpath d='M20 40 L50 26 L80 40 L50 54 Z' fill='white'/%3E%3Cpath d='M32 47 v15 a18 9 0 0 0 36 0 v-15' fill='none' stroke='white' stroke-width='5'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header id="topbar">
+    <div class="topbar-inner">
+      <div class="tb-left">
+        <button id="tb-back" class="tb-back" aria-label="Back">‹</button>
+        <span class="tb-logo" aria-hidden="true">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#4338ca"/></linearGradient></defs>
+            <rect x="6" y="6" width="88" height="88" rx="26" fill="url(#g)"/>
+            <path d="M22 42 L50 28 L78 42 L50 56 Z" fill="#fff"/>
+            <path d="M34 49 v14 a16 8 0 0 0 32 0 v-14" fill="none" stroke="#fff" stroke-width="5"/>
+            <circle cx="78" cy="42" r="3.4" fill="#fff"/><path d="M78 42 v12" stroke="#fff" stroke-width="3"/>
+          </svg>
+        </span>
+        <div id="tb-title">Homeroom</div>
+      </div>
+      <div id="tb-streak" class="streak">🔥 <span id="streak-num">0</span></div>
+    </div>
+  </header>
+
+  <main id="view"></main>
+
+  <nav id="tabbar">
+    <button class="tab active" data-tab="today"><span class="tab-ic">🏫</span><span class="tab-tx">Today</span></button>
+    <button class="tab" data-tab="learn"><span class="tab-ic">📚</span><span class="tab-tx">Learn</span></button>
+    <button class="tab" data-tab="review"><span class="tab-ic">🗂️</span><span class="tab-tx">Review</span><span class="tab-badge" style="display:none">0</span></button>
+    <button class="tab" data-tab="me"><span class="tab-ic">📈</span><span class="tab-tx">Profile</span></button>
+  </nav>
+
+  <!-- data -->
+  <script src="data/manifest.js"></script>
+  <script src="data/subject_social.js"></script>
+  <script src="data/subject_ela.js"></script>
+  <script src="data/subject_lifeskills.js"></script>
+  <script src="data/subject_math.js"></script>
+  <script src="data/subject_science.js"></script>
+  <script src="data/subject_languages.js"></script>
+  <script src="data/subject_cs.js"></script>
+  <script src="data/subject_health.js"></script>
+  <script src="data/subject_arts.js"></script>
+
+  <!-- engine -->
+  <script src="js/storage.js"></script>
+  <script src="js/curriculum.js"></script>
+  <script src="js/srs.js"></script>
+
+  <!-- pages -->
+  <script src="js/modules/today.js"></script>
+  <script src="js/modules/learn.js"></script>
+  <script src="js/modules/lesson.js"></script>
+  <script src="js/modules/review.js"></script>
+  <script src="js/modules/me.js"></script>
+
+  <!-- controller -->
+  <script src="js/app.js"></script>
+</body>
+</html>
