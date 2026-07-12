@@ -69,6 +69,14 @@ a { color: var(--brand); }
 #tb-title { font-weight: 800; font-size: 18px; letter-spacing: 0.01em; white-space: nowrap; }
 .tb-back { background: none; border: none; font-size: 22px; color: var(--brand); cursor: pointer; padding: 4px 8px 4px 0; margin-left: -4px; display: none; }
 body.subview .tb-back { display: block; }
+/* 内嵌模式：主标签隐藏顶栏（润 Hub 外壳已提供返回）；子页仅保留一个悬浮 ← 返回胶囊 */
+html.embed #topbar { display: none; }
+html.embed #view { padding-top: calc(env(safe-area-inset-top) + 16px); }
+html.embed .tb-logo, html.embed #tb-title, html.embed #tb-streak { display: none; }
+html.embed body.subview #topbar { display: block; background: none; border-bottom: none; -webkit-backdrop-filter: none; backdrop-filter: none; height: auto; z-index: 51; pointer-events: none; }
+html.embed body.subview .topbar-inner { height: auto; padding: 10px 14px; justify-content: flex-start; }
+html.embed body.subview .tb-back { pointer-events: auto; background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px 5px 9px; box-shadow: var(--shadow-sm); font-size: 17px; }
+html.embed body.subview #view { padding-top: calc(env(safe-area-inset-top) + 54px); }
 .streak {
   font-size: 14px; font-weight: 800; color: var(--flame);
   background: #fff7ed; border: 1px solid #fed7aa; border-radius: 999px; padding: 5px 12px;
