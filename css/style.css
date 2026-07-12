@@ -2,27 +2,27 @@
    Homeroom — visual system  (light, clean, classroom-warm)
    =================================================================== */
 :root {
-  --bg: #f5f7fb;
-  --bg-2: #eef2f8;
-  --surface: #ffffff;
-  --surface-2: #f7f9fc;
-  --surface-3: #eef2f8;
-  --line: #e7ecf4;
-  --line-strong: #d8e0ec;
+  --bg: #f3eee0;
+  --bg-2: #ece4d2;
+  --surface: #fffdf7;
+  --surface-2: #faf5e9;
+  --surface-3: #f1e9d8;
+  --line: #e5dcc6;
+  --line-strong: #d8ccb0;
 
-  --tx: #1e2a44;
-  --tx-dim: #5b6680;
-  --tx-faint: #94a1b8;
+  --tx: #13281b;
+  --tx-dim: #4c6051;
+  --tx-faint: #8a9788;
 
-  /* brand: indigo (school) + warm accent */
-  --brand: #4f46e5;
-  --brand-2: #6366f1;
-  --brand-grad: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
-  --hero-grad: linear-gradient(135deg, #4338ca 0%, #6366f1 52%, #818cf8 120%);
-  --tint: #eef2ff;
-  --tint-line: #c7d2fe;
+  /* brand: 润 green + warm gold accent */
+  --brand: #2a9d4e;
+  --brand-2: #0f6f3c;
+  --brand-grad: linear-gradient(135deg, #2a9d4e 0%, #34b85f 100%);
+  --hero-grad: linear-gradient(135deg, #0f6f3c 0%, #2a9d4e 52%, #4bbf6a 120%);
+  --tint: #eaf4ec;
+  --tint-line: #cfe6d6;
 
-  --accent: #f59e0b;       /* apple/gold */
+  --accent: #c0902c;       /* 润 gold */
   --good: #16a34a;
   --warn: #f59e0b;
   --bad: #ef4444;
@@ -34,7 +34,7 @@
   --topbar-h: 54px;
   --shadow: 0 6px 20px rgba(30,41,59,0.07), 0 1px 3px rgba(30,41,59,0.05);
   --shadow-sm: 0 2px 8px rgba(30,41,59,0.06);
-  --shadow-glow: 0 8px 22px -8px rgba(79,70,229,0.45);
+  --shadow-glow: 0 8px 22px -8px rgba(42,157,78,0.42);
   --maxw: 760px;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -42,8 +42,8 @@ html, body { margin: 0; padding: 0; height: 100%; }
 body {
   background-color: var(--bg);
   background-image:
-    radial-gradient(820px 440px at 88% -12%, rgba(99,102,241,0.10), transparent 60%),
-    radial-gradient(720px 440px at 4% 2%, rgba(129,140,248,0.10), transparent 55%);
+    radial-gradient(820px 440px at 88% -12%, rgba(42,157,78,0.10), transparent 60%),
+    radial-gradient(720px 440px at 4% 2%, rgba(192,144,44,0.10), transparent 55%);
   background-attachment: fixed;
   color: var(--tx);
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", sans-serif;
@@ -51,7 +51,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: none;
 }
-::selection { background: rgba(99,102,241,0.20); color: #111; }
+::selection { background: rgba(42,157,78,0.22); color: #0b3f24; }
 ::-webkit-scrollbar { width: 0; height: 0; }
 a { color: var(--brand); }
 
@@ -127,11 +127,11 @@ html.embed body.subview #view { padding-top: calc(env(safe-area-inset-top) + 54p
   border-radius: 22px; margin-bottom: 16px; box-shadow: var(--shadow-glow);
   position: relative; overflow: hidden;
 }
-.hero-illus { position: relative; height: clamp(128px, 30vw, 210px); background: #eef2ff; }
+.hero-illus { position: relative; height: clamp(128px, 30vw, 210px); background: #eaf4ec; }
 .hero-illus img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; }
 .hero-illus::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 34px;
-  background: linear-gradient(to bottom, transparent, #4338ca); opacity: .9;
+  background: linear-gradient(to bottom, transparent, #0f6f3c); opacity: .9;
 }
 .hero-body { background: var(--hero-grad); padding: 18px 22px 22px; position: relative; }
 .hero h1 { margin: 0 0 4px; font-size: 22px; font-weight: 800; letter-spacing: .01em; }

@@ -84,7 +84,7 @@
     setTimeout(() => t.remove(), 1850);
   }
   function celebrate() {
-    const colors = ["#4f46e5", "#6366f1", "#22d3ee", "#34d399", "#fbbf24", "#fb7185"];
+    const colors = ["#2a9d4e", "#0f6f3c", "#c0902c", "#34d399", "#e8b64b", "#7bc47f"];
     let box = document.getElementById("confetti");
     if (!box) { box = document.createElement("div"); box.id = "confetti"; document.body.appendChild(box); }
     box.innerHTML = "";
