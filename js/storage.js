@@ -65,6 +65,7 @@
       update("activity", {}, (a) => { a[date] = (a[date] || 0) + 1; return a; });
       update("xp", 0, (x) => x + (window.HR_META ? HR_META.xpPerLesson : 20));
       Streak.recompute();
+      try { if (window.parent && window.parent !== window) window.parent.postMessage({ type: "run-points", points: 5, source: "homeroom" }, "*"); } catch (e) {}
     }
     return firstTime;
   }
